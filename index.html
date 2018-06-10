@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/all.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <ul class="header-title">
+                <li id="Home" class="page-select"><a href="">My Tasks</a> </li>
+                <li id="InProgress" ><a href="">In Progress</a></li>
+                <li id="Completed" ><a href="">Completed</a></li>
+            </ul>
+        </div>
+        <div class="task-list">
+            <!-- 新增事項 -->
+            <div class="task-add">
+                    <input id="task-content" type="text" placeholder="＋　 Add Task">
+                    <label for="task-content"></label>
+            </div>
+            <!-- 點擊後的新增事件 -->
+            <div class="add-event">
+                <div class="deadline">
+                    <label for="task-tick">
+                        <input id="task-text" type="text" placeholder="Type Something Here...">
+                    </label>
+                    <i class="i-pen-add fas fa-pencil-alt"></i>
+                    <span class="star-mark">
+                        <i class="i-star-add far fa-star"></i>
+                        <i class="i-star-add-yellow hide fas fa-star"></i>
+                    </span>
+                    <hr>
+                    <i class="i-date-add far fa-calendar-alt">
+                        <span> Deadline</span>
+                        <br>
+                        <input type="date" id="date">
+                        <input type="time" id="time">
+                    </i>
+                </div>
+                <div class="file">
+                    <i class="i-file-add far fa-file">
+                        <span> File</span>
+                        <br>
+                        <label for="file">
+                            <i class="file-icon fas fa-plus-square fa-2x">
+                                <input type="file" id="file">
+                            </i>
+                        </label> 
+                    </i>
+                </div>
+                <div class="comment">
+                    <i class="i-commet-add far fa-comment-dots">
+                        <label for="textarea"><span>Commet</span></label> 
+                        <br>
+                        <textarea id="textarea" placeholder="Type your moemo here..." cols="45" rows="5"></textarea>
+                    </i>
+                </div>
+                <div class="btn-between">
+                    <button class="cancel" type="reset"> 
+                        <i class="fas fa-times"></i> Cancel</button>
+                    <button class="save" type="reset">
+                        <i class="fas fa-check"></i> Save</button>
+                </div>         
+            </div>
+            <!-- 待辦事項 -->
+            <div class="task-box">
+                <div class="task">
+                    <i class="i-move fas fa-ellipsis-v"></i>
+                    <input id="task-tick" type="checkbox" value="completed">
+                    <label for="task-tick"><span> Type Something Here...</span></label>
+                    <label for="task-tick" class="for-task" ></label>
+                    <i class="i-pen fas fa-pencil-alt"></i>
+                    <span class="star-mark">
+                        <i class="i-star far fa-star"></i>
+                        <i class="i-star-yellow hide fas fa-star"></i>
+                    </span>
+                    <br>
+                    <span class="click-hide">
+                        <i class="i-date far fa-calendar-alt"> 6/11</i>
+                        <i class="i-file far fa-file"></i>
+                        <i class="i-commet far fa-comment-dots"></i>
+                        <i class="i-trash fas fa-trash-alt"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="task-box">
+                    <div class="task">
+                        <i class="i-move fas fa-ellipsis-v"></i>
+                        <input id="task-tick" type="checkbox" value="completed">
+                        <label for="task-tick"><span> Type Something Here...</span></label>
+                        <label for="task-tick" class="for-task" ></label>
+                        <i class="i-pen fas fa-pencil-alt"></i>
+                        <span class="star-mark">
+                            <i class="i-star far fa-star"></i>
+                            <i class="i-star-yellow hide fas fa-star"></i>
+                        </span>
+                        <br>
+                        <span class="click-hide">
+                            <i class="i-date far fa-calendar-alt"> 6/11</i>
+                            <i class="i-file far fa-file"></i>
+                            <i class="i-commet far fa-comment-dots"></i>
+                            <i class="i-trash fas fa-trash-alt"></i>
+                        </span>
+                    </div>
+            </div>
+            <div class="task-box">
+                    <div class="task">
+                        <i class="i-move fas fa-ellipsis-v"></i>
+                        <input id="task-tick" type="checkbox" value="completed">
+                        <label for="task-tick"><span> Type Something Here...</span></label>
+                        <label for="task-tick" class="for-task" ></label>
+                        <i class="i-pen fas fa-pencil-alt"></i>
+                        <span class="star-mark">
+                            <i class="i-star far fa-star"></i>
+                            <i class="i-star-yellow hide fas fa-star"></i>
+                        </span>
+                        <br>
+                        <span class="click-hide">
+                            <i class="i-date far fa-calendar-alt"> 6/11</i>
+                            <i class="i-file far fa-file"></i>
+                            <i class="i-commet far fa-comment-dots"></i>
+                            <i class="i-trash fas fa-trash-alt"></i>
+                        </span>
+                    </div>
+            </div>
+            <div class="task-box">
+                    <div class="task">
+                        <i class="i-move fas fa-ellipsis-v"></i>
+                        <input id="task-tick" type="checkbox" value="completed">
+                        <label for="task-tick"><span> Type Something Here...</span></label>
+                        <label for="task-tick" class="for-task" ></label>
+                        <i class="i-pen fas fa-pencil-alt"></i>
+                        <span class="star-mark">
+                            <i class="i-star far fa-star"></i>
+                            <i class="i-star-yellow hide fas fa-star"></i>
+                        </span>
+                        <br>
+                        <span class="click-hide">
+                            <i class="i-date far fa-calendar-alt"> 6/11</i>
+                            <i class="i-file far fa-file"></i>
+                            <i class="i-commet far fa-comment-dots"></i>
+                            <i class="i-trash fas fa-trash-alt"></i>
+                        </span>
+                    </div>
+            </div>
+            <!-- 已完成事項 -->
+            <div class="task-done">
+                <i class="i-move fas fa-ellipsis-v"></i>
+                <input id="task-tick" type="checkbox" value="completed">
+                <label for="task-tick"><span> Type Something Here...</span></label>
+                <label for="task-tick" class="for-task-click" ></label>
+                <i class="i-pen fas fa-pencil-alt"></i>
+                <span class="star-mark">
+                    <i class="i-star far fa-star"></i>
+                    <i class="i-star-yellow hide fas fa-star"></i>
+                </span>
+                <br>
+
+            </div>
+            <!-- 最下方剩餘任務數量 -->
+            <div class="task-left">4 tasks left</div>
+            <div class="task-completed">1 tasks left</div>
+        </div>
+</body>
+</html>
